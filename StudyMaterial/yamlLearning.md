@@ -7,3 +7,7 @@
   - jobs: define jobs their OS, and steps.
   - steps: sequential commands or actions.  
   - run: Shell commands to execute.
+  - uses: Use prebuilt actions.
+  - with: pass params to actions.
+  - env: set environment variables.
+  - needs: make one job depend on another.
