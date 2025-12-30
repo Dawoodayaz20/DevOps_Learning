@@ -3,6 +3,7 @@
 1. FROM image[:tag] [AS name]
   - *FROM* command specifies the base image to use for the new image.
     * e.g: FROM ubuntu:20.04
+    1. *FROM* must be the first instruction in a Docker file.
 
 2. WORKDIR /path/to/workdir
   - *WORKDIR* command specifies the working directory.
@@ -48,3 +49,4 @@
       ~ CMD : Default executable.(It can be changed)
       ~ ENTRYPOINT Fixed startng point (from where the container will start)
     3. If both have to be used, CMD's arguments will be passed to the ENTRYPOINT's arguments.
+
