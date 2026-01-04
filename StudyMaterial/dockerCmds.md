@@ -50,3 +50,15 @@
       ~ ENTRYPOINT Fixed startng point (from where the container will start)
     3. If both have to be used, CMD's arguments will be passed to the ENTRYPOINT's arguments.
 
+# Docer Shell Commands:
+1. `docker stop (container name/ID/ID's first 3 letters)`:
+  - *docker stop* will return the same container ID if the command ran successfully. 
+
+2. `docker container prune`
+  - *docker container prune* removes all the stopped containers. 
+
+3. `docker build -t (NameOfImage)`:
+  - *docker build -t (NameOfImage)* command is used to build the image for a docker container. 
+
+4. `docker run -p 5173:5173 (NameOfImage)`:
+  - This command is used to run the docker container on a specified port, so that the container knows to listen from a specific port.
