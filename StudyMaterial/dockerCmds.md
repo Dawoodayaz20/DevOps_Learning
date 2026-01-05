@@ -50,7 +50,7 @@
       ~ ENTRYPOINT Fixed startng point (from where the container will start)
     3. If both have to be used, CMD's arguments will be passed to the ENTRYPOINT's arguments.
 
-# Docer Shell Commands:
+# Docker Shell Commands:
 1. `docker stop (container name/ID/ID's first 3 letters)`:
   - *docker stop* will return the same container ID if the command ran successfully. 
 
