@@ -60,5 +60,18 @@
 3. `docker build -t (NameOfImage)`:
   - *docker build -t (NameOfImage)* command is used to build the image for a docker container. 
 
-4. `docker run -p 5173:5173 (NameOfImage)`:
-  - This command is used to run the docker container on a specified port, so that the container knows to listen from a specific port.
+4. `docker run -t (NameOfImage)`:
+  - It runs the container.
+    * At this point your react project will show this: `Local: http://localhost:5173/ ➜ Network: use --host to expose`
+    * When you will visit port 5173, you wil not be able to open your react project that is running in the container because it is running in an isolated env on localhost, So you need to expose it to your Network by following the steps below:
+      1. You need to change the *package.json* file of your react-project.
+      2.  Inside the file, under scripts, in `dev: vite`, add : `vite --host`.
+      3. This will expose your react app on your network.
+
+5. `docker run -p 5173:5173 (NameOfImage)`:
+  - *Port Mapping* that allows us to map port on the docker container and hosts machine.
+  This command is used to run the docker container on a specified port, so that the container knows to listen from a specific port.
+  - Running this command.
+
+6. *Create .dockerignore file inside src folder*:
+  - We create this file and add node_modules inside it because we don't need it inside our container.
