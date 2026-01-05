@@ -76,5 +76,9 @@
 6. *Create .dockerignore file inside src folder*:
   - We create this file and add node_modules inside it because we don't need it inside our container.
 
-7. `docker run -p 5173:5173 -v "$(pwd):/app" react-docker`:
-  - This command 
+7. `docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker`:
+  - This command mounts the current working directory into the app directory inside the container.
+  - Any change in the local directory will immediately reflect in the app directory inside container.
+    * `-v` stands for volume. It keeps track of all the changes.
+    * `pwd` represents current working directory. It executes in the runtime to provide the current working directory path.
+    * `-v /app/node_modules` to make volume for the node_modules in the container so that volume mount is available in the container. When we run the container, it will not have to reinstall the node_modules. 
