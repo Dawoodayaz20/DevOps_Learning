@@ -60,7 +60,7 @@
 3. `docker build -t (NameOfImage)`:
   - *docker build -t (NameOfImage)* command is used to build the image for a docker container. 
 
-4. `docker run -t (NameOfImage)`:
+4. `docker run -p (NameOfImage)`:
   - It runs the container.
     * At this point your react project will show this: `Local: http://localhost:5173/ ➜ Network: use --host to expose`
     * When you will visit port 5173, you wil not be able to open your react project that is running in the container because it is running in an isolated env on localhost, So you need to expose it to your Network by following the steps below:
