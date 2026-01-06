@@ -17,6 +17,7 @@ function App() {
         </a>
       </div>
       <h1>Docker is awesome! Indeed</h1>
+      <h2>Hello from Docker Container</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

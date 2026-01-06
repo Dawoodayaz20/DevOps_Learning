@@ -87,19 +87,21 @@
   - If creating vite react app, running the app in a container will not reload on live changes while development of App. Even when running with this command:
     `docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker`
   - So for that purpose, follow the steps below:
-    1. Edit your vite.config.ts file by doing this:
-``` import { defineConfig } from 'vite'
-      import react from '@vitejs/plugin-react'
-      // https://vite.dev/config/
-      export default defineConfig({
-        plugins: [react()],
-        server: {
-          watch: {
-            usePolling: true, // Enable polling for file changes
-          },
-          host: '0.0.0.0', // Listen on all network interfaces
-          port: 5173,
-          strictPort: true,
-        },
-      })
+    * Edit your vite.config.ts file by doing this:
+``` 
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    watch: {
+      usePolling: true, // Enable polling for file changes
+    },
+    host: '0.0.0.0', // Listen on all network interfaces
+    port: 5173,
+    strictPort: true,
+  },
+})
 ```
+
