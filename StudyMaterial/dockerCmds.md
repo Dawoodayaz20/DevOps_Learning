@@ -110,3 +110,8 @@ export default defineConfig({
 
 10. ` docker push dawoodayaz1234/react-docker `
   - Finally your docker image get pushed on docker hub. 
+
+### Bonus Point:
+11. `docker init`
+  - This command skips all the steps we learned above, setting the entire project for us from CLI. 
+  - We just have to run this command in the terminal of a new **React.JS** project. After that it will create the docker file. 
