@@ -104,4 +104,9 @@ export default defineConfig({
   },
 })
 ```
+### Publishing Image:
+9. ` docker tag image_name docker_username/image_name `
+  - It publishes the image that you created of your app.
 
+10. ` docker push dawoodayaz1234/react-docker `
+  - Finally your docker image get pushed on docker hub. 
